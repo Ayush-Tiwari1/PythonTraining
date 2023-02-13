@@ -1,0 +1,26 @@
+
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+     <div class="row">
+    <div class="col-sm-8">
+        <div class="card card-body">
+            <h4>UPDATE EMPLOYEE {{ pk }}</h4>
+    <form action="" method="POST">
+    {% csrf_token %}
+
+
+
+    
+{{ form.as_p }}
+
+    <input class="btn btn-warning btn-sm"  type="submit" name="Update">
+        <a class="btn btn-success btn-sm" href="{% url 'addshow' %}">Back to Dashbord</a>
+
+    </form>
+        </div>
+    </div>
+     </div>
+
+
+{% endblock %}
